@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="WSTowersModelStoreContainer" CdmEntityContainer="WSTowersEntities">
+    <EntitySetMapping Name="categoria">
+      <EntityTypeMapping TypeName="WSTowersModel.categoria">
+        <MappingFragment StoreEntitySet="categoria">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Categoria1" ColumnName="Categoria" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="cidade">
+      <EntityTypeMapping TypeName="WSTowersModel.cidade">
+        <MappingFragment StoreEntitySet="cidade">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Cidade1" ColumnName="Cidade" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="estado">
+      <EntityTypeMapping TypeName="WSTowersModel.estado">
+        <MappingFragment StoreEntitySet="estado">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Estado1" ColumnName="Estado" />
+          <ScalarProperty Name="Sigla" ColumnName="Sigla" />
+          <ScalarProperty Name="Regiao" ColumnName="Regiao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="estoque">
+      <EntityTypeMapping TypeName="WSTowersModel.estoque">
+        <MappingFragment StoreEntitySet="estoque">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="produto" ColumnName="produto" />
+          <ScalarProperty Name="loja" ColumnName="loja" />
+          <ScalarProperty Name="quantidade" ColumnName="quantidade" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="genero">
+      <EntityTypeMapping TypeName="WSTowersModel.genero">
+        <MappingFragment StoreEntitySet="genero">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Genero1" ColumnName="Genero" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="loja">
+      <EntityTypeMapping TypeName="WSTowersModel.loja">
+        <MappingFragment StoreEntitySet="loja">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="loja1" ColumnName="loja" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="participante">
+      <EntityTypeMapping TypeName="WSTowersModel.participante">
+        <MappingFragment StoreEntitySet="participante">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nome" ColumnName="nome" />
+          <ScalarProperty Name="idade" ColumnName="idade" />
+          <ScalarProperty Name="cidade" ColumnName="cidade" />
+          <ScalarProperty Name="genero" ColumnName="genero" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="produto">
+      <EntityTypeMapping TypeName="WSTowersModel.produto">
+        <MappingFragment StoreEntitySet="produto">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="produto1" ColumnName="produto" />
+          <ScalarProperty Name="valor" ColumnName="valor" />
+          <ScalarProperty Name="categoria" ColumnName="categoria" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="regiao">
+      <EntityTypeMapping TypeName="WSTowersModel.regiao">
+        <MappingFragment StoreEntitySet="regiao">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Regiao1" ColumnName="Regiao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="WSTowersModel.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vendas">
+      <EntityTypeMapping TypeName="WSTowersModel.vendas">
+        <MappingFragment StoreEntitySet="vendas">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="participante" ColumnName="participante" />
+          <ScalarProperty Name="produto" ColumnName="produto" />
+          <ScalarProperty Name="quantidade" ColumnName="quantidade" />
+          <ScalarProperty Name="loja" ColumnName="loja" />
+          <ScalarProperty Name="data" ColumnName="data" />
+          <ScalarProperty Name="hora" ColumnName="hora" />
+          <ScalarProperty Name="transação" ColumnName="transação" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

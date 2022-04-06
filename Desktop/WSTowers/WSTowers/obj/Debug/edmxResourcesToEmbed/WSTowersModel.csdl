@@ -1,0 +1,292 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="WSTowersModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="categoria">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="Categoria1" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="produto" Relationship="Self.FK_produto_categoria" FromRole="categoria" ToRole="produto" />
+  </EntityType>
+  <EntityType Name="cidade">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="Cidade1" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Estado" Type="Int32" />
+    <NavigationProperty Name="estado1" Relationship="Self.FK_cidade_estado" FromRole="cidade" ToRole="estado" />
+    <NavigationProperty Name="participante" Relationship="Self.FK_participante_cidade" FromRole="cidade" ToRole="participante" />
+  </EntityType>
+  <EntityType Name="estado">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="Estado1" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Sigla" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Regiao" Type="Int32" />
+    <NavigationProperty Name="cidade" Relationship="Self.FK_cidade_estado" FromRole="estado" ToRole="cidade" />
+    <NavigationProperty Name="regiao1" Relationship="Self.FK_estado_regiao" FromRole="estado" ToRole="regiao" />
+  </EntityType>
+  <EntityType Name="estoque">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="produto" Type="Int32" />
+    <Property Name="loja" Type="Int32" />
+    <Property Name="quantidade" Type="Int32" />
+    <NavigationProperty Name="loja1" Relationship="Self.FK_estoque_loja" FromRole="estoque" ToRole="loja" />
+    <NavigationProperty Name="produto1" Relationship="Self.FK_estoque_produto" FromRole="estoque" ToRole="produto" />
+  </EntityType>
+  <EntityType Name="genero">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="Genero1" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="participante" Relationship="Self.FK_participante_genero" FromRole="genero" ToRole="participante" />
+  </EntityType>
+  <EntityType Name="loja">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="loja1" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="estoque" Relationship="Self.FK_estoque_loja" FromRole="loja" ToRole="estoque" />
+    <NavigationProperty Name="vendas" Relationship="Self.FK_vendas_loja" FromRole="loja" ToRole="vendas" />
+  </EntityType>
+  <EntityType Name="participante">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="nome" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="idade" Type="Int32" />
+    <Property Name="cidade" Type="Int32" />
+    <Property Name="genero" Type="Int32" />
+    <NavigationProperty Name="cidade1" Relationship="Self.FK_participante_cidade" FromRole="participante" ToRole="cidade" />
+    <NavigationProperty Name="genero1" Relationship="Self.FK_participante_genero" FromRole="participante" ToRole="genero" />
+    <NavigationProperty Name="vendas" Relationship="Self.FK_vendas_participante" FromRole="participante" ToRole="vendas" />
+  </EntityType>
+  <EntityType Name="produto">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="produto1" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="valor" Type="Int32" />
+    <Property Name="categoria" Type="Int32" />
+    <NavigationProperty Name="categoria1" Relationship="Self.FK_produto_categoria" FromRole="produto" ToRole="categoria" />
+    <NavigationProperty Name="estoque" Relationship="Self.FK_estoque_produto" FromRole="produto" ToRole="estoque" />
+    <NavigationProperty Name="vendas" Relationship="Self.FK_vendas_produto" FromRole="produto" ToRole="vendas" />
+  </EntityType>
+  <EntityType Name="regiao">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="Regiao1" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="estado" Relationship="Self.FK_estado_regiao" FromRole="regiao" ToRole="estado" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="vendas">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="participante" Type="Int32" />
+    <Property Name="produto" Type="Int32" />
+    <Property Name="quantidade" Type="Int32" />
+    <Property Name="loja" Type="Int32" />
+    <Property Name="data" Type="DateTime" Precision="3" />
+    <Property Name="hora" Type="DateTime" Precision="3" />
+    <Property Name="transação" Type="Int32" />
+    <NavigationProperty Name="loja1" Relationship="Self.FK_vendas_loja" FromRole="vendas" ToRole="loja" />
+    <NavigationProperty Name="participante1" Relationship="Self.FK_vendas_participante" FromRole="vendas" ToRole="participante" />
+    <NavigationProperty Name="produto1" Relationship="Self.FK_vendas_produto" FromRole="vendas" ToRole="produto" />
+  </EntityType>
+  <Association Name="FK_produto_categoria">
+    <End Role="categoria" Type="Self.categoria" Multiplicity="0..1" />
+    <End Role="produto" Type="Self.produto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="categoria">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="produto">
+        <PropertyRef Name="categoria" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_cidade_estado">
+    <End Role="estado" Type="Self.estado" Multiplicity="0..1" />
+    <End Role="cidade" Type="Self.cidade" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="estado">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="cidade">
+        <PropertyRef Name="Estado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_participante_cidade">
+    <End Role="cidade" Type="Self.cidade" Multiplicity="0..1" />
+    <End Role="participante" Type="Self.participante" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="cidade">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="participante">
+        <PropertyRef Name="cidade" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_estado_regiao">
+    <End Role="regiao" Type="Self.regiao" Multiplicity="0..1" />
+    <End Role="estado" Type="Self.estado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="regiao">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="estado">
+        <PropertyRef Name="Regiao" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_estoque_loja">
+    <End Role="loja" Type="Self.loja" Multiplicity="0..1" />
+    <End Role="estoque" Type="Self.estoque" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="loja">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="estoque">
+        <PropertyRef Name="loja" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_estoque_produto">
+    <End Role="produto" Type="Self.produto" Multiplicity="0..1" />
+    <End Role="estoque" Type="Self.estoque" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="produto">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="estoque">
+        <PropertyRef Name="produto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_participante_genero">
+    <End Role="genero" Type="Self.genero" Multiplicity="0..1" />
+    <End Role="participante" Type="Self.participante" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="genero">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="participante">
+        <PropertyRef Name="genero" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_vendas_loja">
+    <End Role="loja" Type="Self.loja" Multiplicity="0..1" />
+    <End Role="vendas" Type="Self.vendas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="loja">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="vendas">
+        <PropertyRef Name="loja" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_vendas_participante">
+    <End Role="participante" Type="Self.participante" Multiplicity="0..1" />
+    <End Role="vendas" Type="Self.vendas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="participante">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="vendas">
+        <PropertyRef Name="participante" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_vendas_produto">
+    <End Role="produto" Type="Self.produto" Multiplicity="0..1" />
+    <End Role="vendas" Type="Self.vendas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="produto">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="vendas">
+        <PropertyRef Name="produto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="WSTowersEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="categoria" EntityType="Self.categoria" />
+    <EntitySet Name="cidade" EntityType="Self.cidade" />
+    <EntitySet Name="estado" EntityType="Self.estado" />
+    <EntitySet Name="estoque" EntityType="Self.estoque" />
+    <EntitySet Name="genero" EntityType="Self.genero" />
+    <EntitySet Name="loja" EntityType="Self.loja" />
+    <EntitySet Name="participante" EntityType="Self.participante" />
+    <EntitySet Name="produto" EntityType="Self.produto" />
+    <EntitySet Name="regiao" EntityType="Self.regiao" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+    <EntitySet Name="vendas" EntityType="Self.vendas" />
+    <AssociationSet Name="FK_produto_categoria" Association="Self.FK_produto_categoria">
+      <End Role="categoria" EntitySet="categoria" />
+      <End Role="produto" EntitySet="produto" />
+    </AssociationSet>
+    <AssociationSet Name="FK_cidade_estado" Association="Self.FK_cidade_estado">
+      <End Role="estado" EntitySet="estado" />
+      <End Role="cidade" EntitySet="cidade" />
+    </AssociationSet>
+    <AssociationSet Name="FK_participante_cidade" Association="Self.FK_participante_cidade">
+      <End Role="cidade" EntitySet="cidade" />
+      <End Role="participante" EntitySet="participante" />
+    </AssociationSet>
+    <AssociationSet Name="FK_estado_regiao" Association="Self.FK_estado_regiao">
+      <End Role="regiao" EntitySet="regiao" />
+      <End Role="estado" EntitySet="estado" />
+    </AssociationSet>
+    <AssociationSet Name="FK_estoque_loja" Association="Self.FK_estoque_loja">
+      <End Role="loja" EntitySet="loja" />
+      <End Role="estoque" EntitySet="estoque" />
+    </AssociationSet>
+    <AssociationSet Name="FK_estoque_produto" Association="Self.FK_estoque_produto">
+      <End Role="produto" EntitySet="produto" />
+      <End Role="estoque" EntitySet="estoque" />
+    </AssociationSet>
+    <AssociationSet Name="FK_participante_genero" Association="Self.FK_participante_genero">
+      <End Role="genero" EntitySet="genero" />
+      <End Role="participante" EntitySet="participante" />
+    </AssociationSet>
+    <AssociationSet Name="FK_vendas_loja" Association="Self.FK_vendas_loja">
+      <End Role="loja" EntitySet="loja" />
+      <End Role="vendas" EntitySet="vendas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_vendas_participante" Association="Self.FK_vendas_participante">
+      <End Role="participante" EntitySet="participante" />
+      <End Role="vendas" EntitySet="vendas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_vendas_produto" Association="Self.FK_vendas_produto">
+      <End Role="produto" EntitySet="produto" />
+      <End Role="vendas" EntitySet="vendas" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

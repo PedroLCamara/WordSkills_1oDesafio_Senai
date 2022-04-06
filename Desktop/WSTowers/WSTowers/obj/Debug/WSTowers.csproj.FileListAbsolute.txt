@@ -1,0 +1,16 @@
+C:\Users\Pichau\Desktop\WordSkillsExercicios\PrimeiroDesafio\Desktop\WSTowers\WSTowers\bin\Debug\WSTowers.exe.config
+C:\Users\Pichau\Desktop\WordSkillsExercicios\PrimeiroDesafio\Desktop\WSTowers\WSTowers\bin\Debug\WSTowers.exe
+C:\Users\Pichau\Desktop\WordSkillsExercicios\PrimeiroDesafio\Desktop\WSTowers\WSTowers\bin\Debug\WSTowers.pdb
+C:\Users\Pichau\Desktop\WordSkillsExercicios\PrimeiroDesafio\Desktop\WSTowers\WSTowers\obj\Debug\WSTowers.csproj.AssemblyReference.cache
+C:\Users\Pichau\Desktop\WordSkillsExercicios\PrimeiroDesafio\Desktop\WSTowers\WSTowers\obj\Debug\WSTowers.csproj.SuggestedBindingRedirects.cache
+C:\Users\Pichau\Desktop\WordSkillsExercicios\PrimeiroDesafio\Desktop\WSTowers\WSTowers\obj\Debug\WSTowers.Form1.resources
+C:\Users\Pichau\Desktop\WordSkillsExercicios\PrimeiroDesafio\Desktop\WSTowers\WSTowers\obj\Debug\WSTowers.Properties.Resources.resources
+C:\Users\Pichau\Desktop\WordSkillsExercicios\PrimeiroDesafio\Desktop\WSTowers\WSTowers\obj\Debug\WSTowers.csproj.GenerateResource.cache
+C:\Users\Pichau\Desktop\WordSkillsExercicios\PrimeiroDesafio\Desktop\WSTowers\WSTowers\obj\Debug\WSTowers.csproj.CoreCompileInputs.cache
+C:\Users\Pichau\Desktop\WordSkillsExercicios\PrimeiroDesafio\Desktop\WSTowers\WSTowers\obj\Debug\WSTowers.exe
+C:\Users\Pichau\Desktop\WordSkillsExercicios\PrimeiroDesafio\Desktop\WSTowers\WSTowers\obj\Debug\WSTowers.pdb
+C:\Users\Pichau\Desktop\WordSkillsExercicios\PrimeiroDesafio\Desktop\WSTowers\WSTowers\bin\Debug\EntityFramework.dll
+C:\Users\Pichau\Desktop\WordSkillsExercicios\PrimeiroDesafio\Desktop\WSTowers\WSTowers\bin\Debug\EntityFramework.xml
+C:\Users\Pichau\Desktop\WordSkillsExercicios\PrimeiroDesafio\Desktop\WSTowers\WSTowers\obj\Debug\WSTowers.csproj.CopyComplete
+C:\Users\Pichau\Desktop\WordSkillsExercicios\PrimeiroDesafio\Desktop\WSTowers\WSTowers\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Pichau\Desktop\WordSkillsExercicios\PrimeiroDesafio\Desktop\WSTowers\WSTowers\bin\Debug\EntityFramework.SqlServer.xml

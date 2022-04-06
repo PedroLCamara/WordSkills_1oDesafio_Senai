@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="1c87df362e234f1183b948301257936f" Name="Diagram1">
+        <EntityTypeShape EntityType="WSTowersModel.categoria" Width="1.5" PointX="1.5" PointY="7.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="WSTowersModel.cidade" Width="1.5" PointX="1.5" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="WSTowersModel.estado" Width="1.5" PointX="1.5" PointY="12.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="WSTowersModel.estoque" Width="1.5" PointX="3" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="WSTowersModel.genero" Width="1.5" PointX="1.5" PointY="18.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="WSTowersModel.loja" Width="1.5" PointX="0.75" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="WSTowersModel.participante" Width="1.5" PointX="3.75" PointY="10.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="WSTowersModel.produto" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="WSTowersModel.regiao" Width="1.5" PointX="1.5" PointY="16" IsExpanded="true" />
+        <EntityTypeShape EntityType="WSTowersModel.sysdiagrams" Width="1.5" PointX="3.75" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="WSTowersModel.vendas" Width="1.5" PointX="6" PointY="3.375" IsExpanded="true" />
+        <AssociationConnector Association="WSTowersModel.FK_produto_categoria" ManuallyRouted="false" />
+        <AssociationConnector Association="WSTowersModel.FK_cidade_estado" ManuallyRouted="false" />
+        <AssociationConnector Association="WSTowersModel.FK_participante_cidade" ManuallyRouted="false" />
+        <AssociationConnector Association="WSTowersModel.FK_estado_regiao" ManuallyRouted="false" />
+        <AssociationConnector Association="WSTowersModel.FK_estoque_loja" ManuallyRouted="false" />
+        <AssociationConnector Association="WSTowersModel.FK_estoque_produto" ManuallyRouted="false" />
+        <AssociationConnector Association="WSTowersModel.FK_participante_genero" ManuallyRouted="false" />
+        <AssociationConnector Association="WSTowersModel.FK_vendas_loja" ManuallyRouted="false" />
+        <AssociationConnector Association="WSTowersModel.FK_vendas_participante" ManuallyRouted="false" />
+        <AssociationConnector Association="WSTowersModel.FK_vendas_produto" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
