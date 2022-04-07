@@ -7,11 +7,6 @@ namespace WSTowers.Domains
 {
     public partial class Participante
     {
-        public Participante()
-        {
-            Venda = new HashSet<Venda>();
-        }
-
         public int Id { get; set; }
         public string Nome { get; set; }
         public int? Idade { get; set; }
@@ -20,6 +15,5 @@ namespace WSTowers.Domains
 
         public virtual Cidade CidadeNavigation { get; set; }
         public virtual Genero GeneroNavigation { get; set; }
-        public virtual ICollection<Venda> Venda { get; set; }
     }
 }

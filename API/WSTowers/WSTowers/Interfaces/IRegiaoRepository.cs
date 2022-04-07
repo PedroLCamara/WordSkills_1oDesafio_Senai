@@ -7,6 +7,6 @@ namespace WSTowers.Interfaces
 {
     public interface IRegiaoRepository
     {
-        Task<List<RegiaoViewModel>> ListarVendas();
+        List<Regiao> ListarVendas();
     }
 }

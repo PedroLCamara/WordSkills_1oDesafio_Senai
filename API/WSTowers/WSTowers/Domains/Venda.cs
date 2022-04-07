@@ -14,7 +14,7 @@ namespace WSTowers.Domains
         public int? Loja { get; set; }
         public DateTime? Data { get; set; }
         public DateTime? Hora { get; set; }
-        public int? Transação { get; set; }
+        public long? Transação { get; set; }
 
         public virtual Loja LojaNavigation { get; set; }
         public virtual Participante ParticipanteNavigation { get; set; }

@@ -201,18 +201,20 @@ namespace WSTowers.Contexts
                     .ValueGeneratedNever()
                     .HasColumnName("id");
 
+                entity.Property(e => e.QntVendas).HasComputedColumnSql("([dbo].[CalcularQntVendas]([regiao].[id]))", false);
+
                 entity.Property(e => e.Regiao1)
                     .HasMaxLength(255)
                     .HasColumnName("Regiao");
+
+                entity.Property(e => e.ValorVendido).HasComputedColumnSql("([dbo].[CalcularValorVendido]([regiao].[id]))", false);
             });
 
             modelBuilder.Entity<Venda>(entity =>
             {
-                entity.ToTable("vendas");
+                entity.HasNoKey();
 
-                entity.Property(e => e.Id)
-                    .ValueGeneratedNever()
-                    .HasColumnName("id");
+                entity.ToTable("vendas");
 
                 entity.Property(e => e.Data)
                     .HasColumnType("datetime")
@@ -221,6 +223,8 @@ namespace WSTowers.Contexts
                 entity.Property(e => e.Hora)
                     .HasColumnType("datetime")
                     .HasColumnName("hora");
+
+                entity.Property(e => e.Id).HasColumnName("id");
 
                 entity.Property(e => e.Loja).HasColumnName("loja");
 
@@ -233,17 +237,17 @@ namespace WSTowers.Contexts
                 entity.Property(e => e.Transação).HasColumnName("transação");
 
                 entity.HasOne(d => d.LojaNavigation)
-                    .WithMany(p => p.Venda)
+                    .WithMany()
                     .HasForeignKey(d => d.Loja)
                     .HasConstraintName("FK_vendas_loja");
 
                 entity.HasOne(d => d.ParticipanteNavigation)
-                    .WithMany(p => p.Venda)
+                    .WithMany()
                     .HasForeignKey(d => d.Participante)
                     .HasConstraintName("FK_vendas_participante");
 
                 entity.HasOne(d => d.ProdutoNavigation)
-                    .WithMany(p => p.Venda)
+                    .WithMany()
                     .HasForeignKey(d => d.Produto)
                     .HasConstraintName("FK_vendas_produto");
             });

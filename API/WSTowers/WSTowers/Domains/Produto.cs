@@ -10,7 +10,6 @@ namespace WSTowers.Domains
         public Produto()
         {
             Estoques = new HashSet<Estoque>();
-            Venda = new HashSet<Venda>();
         }
 
         public int Id { get; set; }
@@ -20,6 +19,5 @@ namespace WSTowers.Domains
 
         public virtual Categorium CategoriaNavigation { get; set; }
         public virtual ICollection<Estoque> Estoques { get; set; }
-        public virtual ICollection<Venda> Venda { get; set; }
     }
 }

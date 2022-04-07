@@ -14,6 +14,8 @@ namespace WSTowers.Domains
 
         public int Id { get; set; }
         public string Regiao1 { get; set; }
+        public int? QntVendas { get; set; }
+        public int? ValorVendido { get; set; }
 
         public virtual ICollection<Estado> Estados { get; set; }
     }
