@@ -1,0 +1,15 @@
+C:\Users\Pichau\Desktop\WordSkillsExercicios\PrimeiroDesafio\AlgoritmoMatriz\bin\Debug\net6.0\AlgoritmoMatriz.exe
+C:\Users\Pichau\Desktop\WordSkillsExercicios\PrimeiroDesafio\AlgoritmoMatriz\bin\Debug\net6.0\AlgoritmoMatriz.deps.json
+C:\Users\Pichau\Desktop\WordSkillsExercicios\PrimeiroDesafio\AlgoritmoMatriz\bin\Debug\net6.0\AlgoritmoMatriz.runtimeconfig.json
+C:\Users\Pichau\Desktop\WordSkillsExercicios\PrimeiroDesafio\AlgoritmoMatriz\bin\Debug\net6.0\AlgoritmoMatriz.dll
+C:\Users\Pichau\Desktop\WordSkillsExercicios\PrimeiroDesafio\AlgoritmoMatriz\bin\Debug\net6.0\AlgoritmoMatriz.pdb
+C:\Users\Pichau\Desktop\WordSkillsExercicios\PrimeiroDesafio\AlgoritmoMatriz\obj\Debug\net6.0\AlgoritmoMatriz.csproj.AssemblyReference.cache
+C:\Users\Pichau\Desktop\WordSkillsExercicios\PrimeiroDesafio\AlgoritmoMatriz\obj\Debug\net6.0\AlgoritmoMatriz.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Pichau\Desktop\WordSkillsExercicios\PrimeiroDesafio\AlgoritmoMatriz\obj\Debug\net6.0\AlgoritmoMatriz.AssemblyInfoInputs.cache
+C:\Users\Pichau\Desktop\WordSkillsExercicios\PrimeiroDesafio\AlgoritmoMatriz\obj\Debug\net6.0\AlgoritmoMatriz.AssemblyInfo.cs
+C:\Users\Pichau\Desktop\WordSkillsExercicios\PrimeiroDesafio\AlgoritmoMatriz\obj\Debug\net6.0\AlgoritmoMatriz.csproj.CoreCompileInputs.cache
+C:\Users\Pichau\Desktop\WordSkillsExercicios\PrimeiroDesafio\AlgoritmoMatriz\obj\Debug\net6.0\AlgoritmoMatriz.dll
+C:\Users\Pichau\Desktop\WordSkillsExercicios\PrimeiroDesafio\AlgoritmoMatriz\obj\Debug\net6.0\refint\AlgoritmoMatriz.dll
+C:\Users\Pichau\Desktop\WordSkillsExercicios\PrimeiroDesafio\AlgoritmoMatriz\obj\Debug\net6.0\AlgoritmoMatriz.pdb
+C:\Users\Pichau\Desktop\WordSkillsExercicios\PrimeiroDesafio\AlgoritmoMatriz\obj\Debug\net6.0\AlgoritmoMatriz.genruntimeconfig.cache
+C:\Users\Pichau\Desktop\WordSkillsExercicios\PrimeiroDesafio\AlgoritmoMatriz\obj\Debug\net6.0\ref\AlgoritmoMatriz.dll
